@@ -1,0 +1,4 @@
+#El signo de gato nos ayuda a definir comentarios
+#Ignorar todos los documentos con terminación .txt
+*.txt
+/matcha/archivos/
