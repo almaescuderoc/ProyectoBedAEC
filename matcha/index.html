@@ -3,60 +3,223 @@
     <head>
         <!--Aquí va información importante pero no visible dentro del navegardor-->
         <title>Matcha</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+
         <style>
+
+            @font-face {
+            font-family: 'Alex Brush';
+            src: url("archivos/AlexBrush-Regular.ttf");
+            }
+
+            *{
+                box-sizing:border-box;
+                margin:0px;
+                padding:0px;
+                
+            }
+
             body{
                 background-color: #fffbf7;
-                text-align:center;
             }
             
+            .header{
+                margin: 40px 20px 100px 20px;
+                font-size: 0px;
+                height: 45px;
+                font-family: sans-serif;
+                
+            }
+
+            .header > *{
+                display:inline-block;
+                font-size: 16px;
+                height:100%;
+                line-height: 45px;
+                /*font-family: 'Akaya Telivigala', cursive;*/
+                
+            }
+
+            .logo{
+                width:15%;
+            }
+
+            .logo img{
+                height:100%
+            }
+
+            .navbar{
+                width:70%;
+                text-align: center;
+                color: #025157;
+                font-weight: 500;
+                
+            }
+
+            .accion{
+                width:15%;
+                text-align: right;
+                font-size:14px;
+                font-weight: 600;
+               
+            }
+                               
+        
+            .accion > *{
+                margin-right: 10px;
+                margin-left: 10px;
+            } 
+
+            .accion a{
+                color:#67b54b;               
+            }
+
+            .accion a:hover{
+                color:black;
+                transition: all 1s;
+            }
+
+            .accion button{
+                background-color:#67b54b;
+                border:0;
+                border-radius:5px;
+                /*font-family: 'Akaya Telivigala', cursive;*/
+                
+                color:#fff;
+                padding:12px 14px;
+                font-size: 14px;
+            }
+
+            
+            .bienvenida{
+                margin: 40px 20px 0px 20px;
+                text-align: center;
+            }
+
+            .bienvenida > *{
+                margin-bottom: 24px;
+            }
+
             h1{
                 color: #025157;
+                font-size: 60px;
+                font-family: sans-serif;
+                font-family: 'Alex Brush';
             }
             
             h4{
                 color: #46484c;
+                font-family: sans-serif;
             }
             
-            p{
+            p, #forma input{
                 color:#8b8b8bcc;
             }
 
-            button{
+            #forma button{
                 background-color: #025157;
                 color:#fff;
+                margin-left:-10px;
+                border:none;
             }
 
-            
+            #forma button, #forma input{
+                padding:12px;
+                font-size: 16px;
+                border-radius: 5px;              
+
+            }
+
+            #forma input{
+                border: 1px solid #b6b6b6;
+                
+            }
+
+            button:hover{
+                cursor: pointer;
+            }
+
+            ul li{
+                display: inline-block;
+                color: #025157;
+                list-style: none;
+                cursor:pointer;
+                margin-right: 25px;
+                margin-left: 25px;
+                transition: all 1s;
+                
+            }
+
+            ul li:hover{
+                color: black;
+                
+            }
+
         </style>
 
     </head>
     <body>
         <!--Esto es lo que se verá en el navegador-->
-        <h1>
-            Build your blog. Build your business.
-        </h1>
-        <h4>
-            Instantly publish articles, drive more traffic, grow your 
-            email list, and see your blog's impact on sales.
-        </h4>
+
+        <header class="header">
+
+            <!--Logo con link a la página principal--> 
+            <a href="/" class="logo">
+                <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/footer_logo.svg"  alt="matcha logo">
+            </a>
+            <!--Menu de Navegación--> 
+            <nav class="navbar">
+                <ul>
+                    <li>Platform</li>
+                    <li>Pricing</li>
+                    <li>Customers</li>
+                    <li>Resources</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+            <!--Contenedor de acciones de usuario--> 
+            <div class="accion">
+                <a href="/login" style="text-decoration:none" >Sign In</a>
+                <button type="submit" >Start free trial</button>
+            </div>
+        </header> 
+
+
+        <div class="bienvenida">
+            <h1>
+                Build your blog. Build your business.
+            </h1>
+            <h4>
+                Instantly publish articles, drive more traffic, grow your 
+                email list, and see your blog's impact on sales.
+            </h4>
         
-        <!--O usando un párrafo
-        <p>Instantly publish articles, drive more traffic, grow your 
-            email list, and see your blog's impact on sales.
-        </p>
-        -->
-        <form>
-            <input type="email">
-            <button type="submit">Try it now &rarr;</button>
-        </form>
+        
+            <!--O usando un párrafo
+            <p>Instantly publish articles, drive more traffic, grow your 
+                email list, and see your blog's impact on sales.
+            </p>
+            -->
+            <form id="forma">
+                <input type="email" placeholder="Enter e-mail address">
+                <button type="submit">Try it now &rarr;</button>
+            </form>
 
 
-        <p>Start publising today with a <b>free 7-day trial.</b>
-        <br>
-        <b>No credit card </b> required.
-        </p>
+            <p>Start publising today with a <b>free 7-day trial.</b>
+            <br>
+            <b>No credit card </b> required.
+            </p>
 
-        <img src="archivos/capterra.png" alt="Capterra Image">
+            <img src="archivos/capterra.png" alt="Capterra Image">    
+            <br>
+           
+         
+        </div>
+        
+        <img src="archivos/intro_group_image.png" alt="intro image">
+
 
     </body>
 </html>
