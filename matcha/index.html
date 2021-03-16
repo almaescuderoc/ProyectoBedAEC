@@ -2,12 +2,14 @@
 <html>
     <head>
         <!--Aquí va información importante pero no visible dentro del navegardor-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Matcha</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
 
         <style>
-
             @font-face {
             font-family: 'Alex Brush';
             src: url("archivos/AlexBrush-Regular.ttf");
@@ -15,13 +17,23 @@
 
             *{
                 box-sizing:border-box;
-                margin:0px;
-                padding:0px;
+                margin:0;
+                padding:0;
                 
             }
 
             body{
                 background-color: #fffbf7;
+            }
+
+            .contenedor{
+                width:100%;
+                position: fixed;
+                
+                background-color: #fffbf7;
+                top:0;
+                left:0;
+                right:0;
             }
             
             .header{
@@ -29,7 +41,6 @@
                 font-size: 0px;
                 height: 45px;
                 font-family: sans-serif;
-                
             }
 
             .header > *{
@@ -96,6 +107,7 @@
             .bienvenida{
                 margin: 40px 20px 0px 20px;
                 text-align: center;
+                padding:200px;
             }
 
             .bienvenida > *{
@@ -114,25 +126,27 @@
                 font-family: sans-serif;
             }
             
-            p, #forma input{
+            p, #forma input, .forma2 input{
                 color:#8b8b8bcc;
             }
 
-            #forma button{
+            #forma button, .forma2 button{
                 background-color: #025157;
                 color:#fff;
                 margin-left:-10px;
                 border:none;
             }
 
-            #forma button, #forma input{
+            #forma button, #forma input,
+            .forma2 button, .forma2 input{
                 padding:12px;
                 font-size: 16px;
                 border-radius: 5px;              
 
             }
 
-            #forma input{
+            #forma input,
+            .forma2 input{
                 border: 1px solid #b6b6b6;
                 
             }
@@ -157,36 +171,206 @@
                 
             }
 
+            .imagen2{
+                margin-top:-180px;
+            }
+
+            .publish {
+                /* container styles if any */
+            }
+
+            .publish h3 {
+                font-family: "Alegreya", serif;
+                font-size: 40px;
+                line-height: 48px;
+                color: #025157;
+            }
+
+            .publish > p {
+                font-size: 16px;
+                color: #343434;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+
+            .publish > form {
+                display: flex;
+                align-items: center;
+            }
+
+            .publish > form p {
+                color: #025157;
+                margin-right: 18px;
+            }
+
+            .promo{
+                display: flex; 
+                width: 70%;
+                margin:100px auto;
+                align-items: center;
+
+            }
+
+            
+
+            .contenedor-video{
+                display:flex;    
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .contenedor-video img{
+                width:120px;
+                margin-top:10px;
+            }
+
+            .features{
+                background-color:#025157;
+                padding:5% 10%;
+                display:grid;
+                
+               /* grid-template-columns: repeat(2, 1fr);               
+                grid-template-rows: repeat(2, 1fr); */
+                grid-template: repeat(2, 330px) / repeat(2, 1fr);
+                
+            }
+
+            .features .feature-card {
+            margin-bottom: 30px;
+            margin-left: 15px;
+            margin-right: 15px;
+            background-color: #fff;
+            border: 1px solid #dadada;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            }
+
+            .features .feature-card .feature-content {
+            padding: 30px 20px 40px 40px;
+            flex: 2;
+            }
+
+            .features .feature-card .feature-content > * {
+            margin-bottom: 1rem;
+            margin-top: 0;
+            }
+
+            .features .feature-card .feature-content img {
+            width: 50px;
+            }
+
+            .features .feature-card .feature-content h3 {
+            font-size: 24px;
+            color: #343434;
+            font-weight: 400;
+            }
+
+            .features .feature-card .feature-content p {
+            font-size: 16px;
+            color: #7e7e7e;
+            font-weight: 400;
+            }
+
+            .features .feature-card .feature-content a {
+            font-size: 16px;
+            color: #67b54b;
+            font-weight: 600;
+            text-decoration: none;
+            }
+
+            .features .feature-card .feature-image {
+            flex: 1;
+            width: 40%;
+            position: relative;
+            right: -50px;
+             height: 80%;
+            }
+
+            .features .feature-card .feature-image figure,
+            .features .feature-card .feature-image img{
+            margin-top: 0;
+            height: 100%;
+            }
+           
+
+            @media (max-width:575px){
+                .promo{
+                    flex-direction: column;
+                    max-width:90%;
+                }
+
+                .explanatory-video > video{
+                    width:100%;
+                }
+
+                .publish{
+                    margin-top:10px;
+                }
+
+                .publish > h3{
+                    font-size:25px;
+                    line-height: 1.2;
+                }
+
+                .publish form{
+                    flex-direction: column;
+                    align-items: center;
+                    
+                }
+
+
+                .publish form div{
+                    height: 50px;
+                    margin-top:10px;
+                }
+
+                .publish form div input{
+                    width:65%;
+                }
+
+                .features{
+                    grid-template: repeat(4, 1fr) / 1fr;
+                    padding-left:0;
+                    padding-right: 0;
+                }
+
+                .feature-image{
+                    display:none;
+                }
+            }
         </style>
 
     </head>
     <body>
         <!--Esto es lo que se verá en el navegador-->
+        <div class="contenedor">
+            <header class="header">
 
-        <header class="header">
-
-            <!--Logo con link a la página principal--> 
-            <a href="/" class="logo">
-                <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/footer_logo.svg"  alt="matcha logo">
-            </a>
-            <!--Menu de Navegación--> 
-            <nav class="navbar">
-                <ul>
-                    <li>Platform</li>
-                    <li>Pricing</li>
-                    <li>Customers</li>
-                    <li>Resources</li>
-                    <li>About</li>
-                </ul>
-            </nav>
-            <!--Contenedor de acciones de usuario--> 
-            <div class="accion">
-                <a href="/login" style="text-decoration:none" >Sign In</a>
-                <button type="submit" >Start free trial</button>
-            </div>
-        </header> 
-
-
+                <!--Logo con link a la página principal--> 
+                <a href="/" class="logo">
+                    <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/footer_logo.svg"  alt="matcha logo">
+                </a>
+                <!--Menu de Navegación--> 
+                <nav class="navbar">
+                    <ul>
+                        <li>Platform</li>
+                        <li>Pricing</li>
+                        <li>Customers</li>
+                        <li>Resources</li>
+                        <li>About</li>
+                    </ul>
+                </nav>
+                <!--Contenedor de acciones de usuario--> 
+                <div class="accion">
+                    <a href="/login" style="text-decoration:none" >Sign In</a>
+                    <button type="submit" >Start free trial</button>
+                </div>
+            </header> 
+        </div>
+            
         <div class="bienvenida">
             <h1>
                 Build your blog. Build your business.
@@ -195,13 +379,13 @@
                 Instantly publish articles, drive more traffic, grow your 
                 email list, and see your blog's impact on sales.
             </h4>
-        
-        
-            <!--O usando un párrafo
-            <p>Instantly publish articles, drive more traffic, grow your 
-                email list, and see your blog's impact on sales.
-            </p>
-            -->
+            
+            
+                <!--O usando un párrafo
+                <p>Instantly publish articles, drive more traffic, grow your 
+                    email list, and see your blog's impact on sales.
+                </p>
+                -->
             <form id="forma">
                 <input type="email" placeholder="Enter e-mail address">
                 <button type="submit">Try it now &rarr;</button>
@@ -214,12 +398,112 @@
             </p>
 
             <img src="archivos/capterra.png" alt="Capterra Image">    
-            <br>
-           
-         
+                       
         </div>
-        
-        <img src="archivos/intro_group_image.png" alt="intro image">
+            
+        <img class="imagen2" src="archivos/intro_group_image.png" alt="intro image">
+
+        <section class="promo">
+            
+            <div class=contenedor-video>
+                <video controls poster="archivos/precision.png">
+                    <source src="archivos/videoprueba.mp4" type="video/mp4">
+                </video>
+                <img src="archivos/see_how_it_works.png" alt="">
+             </div>
+
+            <article class="publish">
+                <h3>Publish to your blog in minutes, not hours.</h3>
+                <p>
+                  Your blog is your most powerful asset to build, engage, and retain a loyal
+                  audience. But you don’t have hours to create content that may or may not
+                  work. With Matcha, instantly publish from our library of 10,000+
+                  professionally written articles and build your email list faster with our
+                  powerful conversion tool.
+                </p>
+                <form>
+                  <p>Start publishing today:</p>
+                  <div class="forma2">
+                    <input type="text" placeholder="Enter email" />
+                    <button>Start My Trial</button>
+                  </div>
+                </form>
+              </article>
+        </section>
+
+        <section class="features">
+            <article class="feature-card">
+                <div class="feature-content">
+                    <figure>
+                        <img src="archivos/capterra.png" alt="">
+                    </figure>
+                    <h3>Fill your blog with engaging articles.</h3>
+                    <p>Publish to your blog in less time than it takes to drink your morning coffee.</p>
+                    <a href="">Publish instantly </a>
+                </div> 
+                
+                <div class="feature-image">
+                    <figure>
+                        <img src="archivos/capterra.png" alt="">
+                    </figure>
+                </div>
+            </article>
+
+
+            <article class="feature-card">
+                <div class="feature-content">
+                    <figure>
+                        <img src="archivos/capterra.png" alt="">
+                    </figure>
+                    <h3>Attract and engage more website visitors.</h3>
+                    <p>Enhance your email, social media channels, and paid ads with content from Matcha.</p>
+                    <a href="">Get more site traffic </a>
+                </div> 
+                
+                <div class="feature-image">
+                    <figure>
+                        <img src="archivos/capterra.png" alt="">
+                    </figure>
+                </div>
+            </article>
+
+            
+            
+            <article class="feature-card">
+                <div class="feature-content">
+                    <figure>
+                        <img src="archivos/capterra.png" alt="">
+                    </figure>
+                    <h3>Capture more emails with locked content.</h3>
+                    <p>Convert 10x more of your traffic into subscribers and nurture them to a sale.</p>
+                    <a href="">Grow your email list faster </a>
+                </div> 
+                
+                <div class="feature-image">
+                    <figure>
+                        <img src="archivos/capterra.png" alt="">
+                    </figure>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-content">
+                    <figure>
+                        <img src="archivos/capterra.png" alt="">
+                    </figure>
+                    <h3>Optimize your blog’s performance.</h3>
+                    <p>See what content delivers the most traffic, engagement, email subscribers, and sales.</p>
+                    <a href="">See content’s ROI →</a>
+                </div> 
+                
+                <div class="feature-image">
+                    <figure>
+                        <img src="archivos/capterra.png" alt="">
+                    </figure>
+                </div>
+            </article>
+
+        </section>
 
 
     </body>

@@ -7,10 +7,15 @@
     <title>Coursera Clone</title>
     <link rel="stylesheet" href="stylecss.css">
     <link rel="stylesheet" href="archivos/fontawesome/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     
 </head>
 
 <body>
+
+    <!-- HEADER -->
+
     <div class="contenedor">
         <header class="header">
             
@@ -20,39 +25,152 @@
             
             <nav class="navbar">
                 <button class="btn" type="submit">Explore 
-                    <i class="fas fa-angle-down"></i>
+                    <i class="fas fa-angle-down"></i>   
+                    <div class="explore-menu">    
+                        <ul class="explore-list" >                            
+                            <li><a>Arts and Humanities</a>
+                                <i class="fas fa-angle-right i1"></i></li>
+                            <li><a>Business</a>
+                                <i class="fas fa-angle-right i2"></i></li>
+                            <li></a>Computer Science</a>
+                                <i class="fas fa-angle-right i3"></i></li>
+                            <li></a>Data Science</a>
+                                <i class="fas fa-angle-right i4"></i></li>
+                            <li></a>Information Technology</a>
+                                <i class="fas fa-angle-right i5"></i></li>
+                            <li></a>Health</a>
+                                <i class="fas fa-angle-right i6"></i></li>
+                            <li></a>Math and Logic</a>
+                                <i class="fas fa-angle-right i7"></i></li>
+                            <li></a>Personal Development</a></li>
+                            <li></a>Physical Science and Engineering</a>
+                                <i class="fas fa-angle-right i9"></i>
+                            </li>
+                            <li></a>Social Sciences </a>
+                                <i class="fas fa-angle-right i10"></i></li>
+                            <li></a>Language Learning</a>
+                                <i class="fas fa-angle-right i11"></i></li>
+                            <li></a>Degrees</a>
+                                <i class="fas fa-angle-right i12"></i></li>
+                            <li></a>Certificates</a>
+                                <i class="fas fa-angle-right i13"></i></li>
+                        </ul>
+                    </div>             
                 </button>
+
                 <input type="text" placeholder="What do you want to learn?">
+
                 <button class="buscar" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
             </nav>
 
-            <a href="" class="accion">
+            <div class="accion">
                 <ul>
-                    <li>For Enterprise </li>
-                    <li>For Students</li>
-                    <li>Log In</li>
+                    <li><a href="">For Enterprise</a></li>
+                    <li><a href="">For Students</a></li>
+                    <li><a href="">Log In</a></li>
                 </ul> 
                 <button class="btn" type="submit">Join for Free</button> 
-            </a>
-
+            </div>
             
         </header>
     </div>
-
+ 
+    <!-- MAIN -->
     <main>
-        <section class="">
-            <div> 
-                <h1 class="red-color">Your Course to Success</h1>
-                <p>Build skills with courses, certificates, and degrees online from world-class universities and companies.</p>
+
+        <!-- CONTENEDOR HERO -->
+
+        <section class="container hero">
+            <div class="hero-title"> 
+                <h1 class="title">Your Course to Success</h1>
+                <p class="subtitle">Build skills with courses, certificates, and degrees online from world-class universities and companies.</p>
                 <button type="submit">Join for Free</button>
             </div>
-        </section>
-        <div>
-        </div>
-    </main>
 
+            <div>
+                <img src="archivos/hero-b.png" alt="">
+            </div>
+        </section>
+  
+
+        <!-- PARTNERS -->
+
+        <section class="partners">            
+            <a href="https://www.coursera.org/about/partners" class="partner-text2">We collaborate with 
+                <span class="partner2"> 200+ leading universities and companies</span>
+            </a>
+
+            <div class="partner-imagenes">
+                <a href="https://www.coursera.org/illinois">
+                    <img src="archivos/illinois.png" alt="">
+                </a>
+                <a href="https://www.coursera.org/duke">
+                    <img src="archivos/duke_updated_2020.png" alt="">
+                </a>
+                <a href="https://www.coursera.org/google">                
+                    <img src="archivos/google.png" alt="">
+                </a>
+                <a href="https://www.coursera.org/umich">
+                    <img src="archivos/umich.jfif" alt="">
+                </a>
+                <a href="https://www.coursera.org/ibm">
+                    <img src="archivos/ibm.png" alt="">
+                </a>
+                <a href="https://www.coursera.org/imperial">
+                    <img src="archivos/imperial.png" alt="">
+                </a>
+                <a href="https://www.coursera.org/stanford">
+                    <img src="archivos/stanford.png" alt="">
+                </a>
+                <a href="https://www.coursera.org/penn">
+                <img src="archivos/penn.png" alt="">
+                </a>
+            </div>
+        </section>
+    
+        <!-- GOALS -->
+
+        <section class="goals">            
+            
+            <span>Achieve your goal with Coursera</span>
+
+            <div class="goal-imagenes">
+                <ul>
+                    <li>
+                        <img class="goal-image" src="archivos/Icon-Learn.png" alt="">
+                        <br>
+                        <span class="goal-text">Learn the <br>latest skills</span>
+                        <br>
+                        <small class="small">like business analytics, graphic design, Python, and more</small>
+                    </li>
+                    <li>
+                        <img class="goal-image" src="archivos/Icon-Get-Ready.png" alt="">
+                        <br>
+                        <span class="goal-text">Get ready <br>for a career</span>
+                        <br>
+                        <small class="small">in high-demand fields like IT, AI and cloud engineering</small>
+                    </li>
+                    <li>
+                        <img class="goal-image" src="archivos/Icon-Earn-Degree.png" alt="">
+                        <br>
+                        <span class="goal-text">Earn <br>a degree</span>
+                        <br>
+                        <small class="small">from a leading university in business, computer science, and more</small>
+                    </li>
+                    <li>
+                        <img class="goal-image" src="archivos/Icon-Upskill-your-org.png" alt="">
+                        <br>
+                        <span class="goal-text">Upskill your <br>organization</span>
+                        <br>
+                        <small class="small">with on-demand training and development programs</small>
+                </ul>
+
+            </div>
+        </section>
+
+    </main>
     
 </body>
 </html>
