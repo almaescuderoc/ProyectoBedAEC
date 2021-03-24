@@ -1,0 +1,39 @@
+/** _global.scss */
+$colorBlueP:#0056d2;
+$colorBlueS:#014cad;
+$colorBlueTexto:#0062e4;
+$colorWhite:white;
+$colorLetrasInput: #a39f9f;
+$colorBlack: black;
+$colorMenu: #747272;
+
+/** fuentes */
+$font-page:'Source Sans Pro', sans-serif; 
+
+/** Otras variables*/
+$tipo-fijo:fixed;
+$tipo-flex:flex;
+$tipo-block:block;
+$tipo-inline-flex:inline-flex;
+$tipo-inline-block:inline-block;
+$tipo-none:none;
+$tipo-flex-start:flex-start;
+$center:center;
+$space-around:space-around;
+$wrap:wrap;
+$underline:underline;
+$pos-absoluta:absolute;
+$pointer:pointer;
+
+/** Testing placeholders */
+%buttonGeneral{
+  background-color: $colorBlueP;
+  color:$colorWhite;
+  font-weight:700;
+  border:none;
+  border-radius: 3%; 
+  cursor:pointer;
+  transition: all 0.5s;
+}
+
+ 

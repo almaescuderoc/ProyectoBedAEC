@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coursera Clone</title>
-    <link rel="stylesheet" href="stylecss.css">
+    <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="archivos/fontawesome/css/all.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -19,6 +19,13 @@
     <div class="contenedor">
         <header class="header">
             
+
+            <div class="menu-small">
+                <button type="submit">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
             <a href="https://www.coursera.org/" class="logo">
                 <img src="archivos/coursera_logo.svg" alt="Coursera Logo" >  
             </a>
@@ -67,8 +74,13 @@
 
             <div class="accion">
                 <ul>
-                    <li><a href="">For Enterprise</a></li>
-                    <li><a href="">For Students</a></li>
+                    <li><a href="" id="enterprise-link">For Enterprise</a>
+                        <a href="" id="enterprise-link">Enterprise</a>
+                    </li>
+                    <li>
+                        <a href=""id="student-link">For Students</a>
+                        <a href=""id="student-link">Students</a>
+                    </li>
                     <li><a href="">Log In</a></li>
                 </ul> 
                 <button class="btn" type="submit">Join for Free</button> 
