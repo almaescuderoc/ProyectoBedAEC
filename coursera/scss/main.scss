@@ -17,8 +17,13 @@
   .header{
     max-width:100%;
     display:flex;
-    justify-content:space-around;
-    align-items:center;
+
+    @include alineado (justify-content, space-around);
+    @include alineado (align-items);
+
+    //justify-content:space-around;
+    //align-items:center;
+    
     font-size:0;
     padding: 1% 0;
     margin-bottom: 0px;   
@@ -72,7 +77,8 @@
     .navbar{
       width:51%;
       display:flex;
-      justify-content:flex-start;
+      @include alineado (justify-content, flex-start);
+      //justify-content:flex-start;
 
       & > button{
         @extend %buttonGeneral;
@@ -87,7 +93,8 @@
           line-height:30px;  
         
           color: $colorMenu;  
-          text-align: left;
+          @include alineado (text-align, left);
+          //text-align: left;
           display: none;
 
           .explore-list{
@@ -232,8 +239,11 @@
     .accion{
       width:40%;
       display:flex;  
-      justify-content: flex-end; 
-      align-items: center;
+      @include alineado (justify-content, flex-end);
+      @include alineado (align-items);
+
+     // justify-content: flex-end; 
+     // align-items: center;
       text-decoration:none;
       font-size: 14px;
 
@@ -305,7 +315,8 @@
     }  //Fin accion
 
     @media (max-width:991px) { 
-          justify-content: flex-end;
+        @include alineado (justify-content, flex-end);
+        //justify-content: flex-end;
    }
     
   }  //Fin header
@@ -319,8 +330,11 @@
   padding-top:10%;
 
   display:flex;
-  align-items: center;
-  justify-content:center;
+  @include alineado (align-items);
+  @include alineado (justify-content);
+
+  //align-items: center;
+  //justify-content:center;
 
   .hero-title{
 
@@ -353,7 +367,8 @@
         @media (max-width:991px) {  
               font-size: 60px;
               padding-right:0;
-              text-align: center;
+              @include alineado (text-align);
+              //text-align: center;
           }
       }
       
@@ -361,7 +376,8 @@
         font-size:20px;
         @media (max-width:991px) {  
               font-size:18px;
-              text-align: center;
+              @include alineado (text-align);
+              //text-align: center;
           }
 
       }
@@ -399,7 +415,8 @@
   max-height: 300px;
   background-color: rgb(245,245,245);
   padding:64px;
-  text-align:center;    
+  @include alineado (text-align);
+  //text-align:center;    
   margin:30px auto;
   font-size: 27px;
   line-height:33px;
@@ -424,8 +441,10 @@
 
   .partner-imagenes{
     display:flex;
-    justify-content:center;
-    align-items:center;  
+    @include alineado (justify-content);
+    @include alineado (align-items);
+    //justify-content:center;
+    //align-items:center;  
     max-width:100%;
 
     & > *{
@@ -446,7 +465,8 @@
 
     @media (max-width:991px) {   
           flex-wrap:wrap;
-          justify-content: space-evenly;
+          @include alineado (justify-content, space-evenly);
+          //justify-content: space-evenly;
     }
  
   }  //Fin .partner-imagenes
@@ -469,7 +489,8 @@
   max-height: 600px;
   background-color: $colorWhite;
   padding:5%;
-  text-align:center;    
+  @include alineado (text-align);
+  //text-align:center;    
   margin:3% auto;
   font-size: 43px;
   font-weight: 600;
@@ -479,15 +500,18 @@
     font-size: 20px;
     line-height: 30px;
     display: flex;
-    align-items: center;
+    @include alineado (align-items);
+    //align-items: center;
 
     li{
       width:16%;
       display:inline-flex;
       flex-direction: column;
-      align-items:center; 
+      @include alineado (align-items);
+      //align-items:center; 
       list-style: none;
-      text-align: center;
+      @include alineado (text-align);
+      //text-align: center;
       font-weight: 600;
       margin:0 1%;    
       
@@ -534,7 +558,8 @@
     @media (max-width:991px) {  
           font-size: 17px;
           line-height: 27px; 
-          justify-content: center;
+          @include alineado (justify-content);
+          //justify-content: center;
     }
 
 

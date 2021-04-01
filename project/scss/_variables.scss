@@ -1,0 +1,54 @@
+//Fuentes
+
+$font-doc: Arial, Helvetica, sans-serif;
+
+//Colores
+
+$color-primary-header:#fecb2f;
+$color-border:#BDBDBD;
+$color-P-button:#F44336;
+$color-S-button:#D32F2F;
+$color-Text:#fff;
+$color-hero-Text:#455A64;
+$color-link:#007acc;
+$color-background-formulario:#f1f1f1;
+$colorP-boton-Sig:#2bb82b;
+$colorS-boton-Sig:#26a326;
+
+// Mixins
+
+@mixin alineado($property, $value:center){
+    #{$property}:#{$value};
+}
+  
+@mixin prefixer($property, $value, $prefixes: webkit moz ms o) {
+    #{$property}: #{$value};
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: #{$value};
+    }
+}
+  
+@mixin transition($value: 0.5s) {
+   @include prefixer(transition, $value);
+}
+
+
+// Extends
+
+%general-button{
+    padding:2% 3%;
+
+    background-color: $color-P-button;
+    color:$color-Text;
+    border:$color-P-button;
+    border-radius:4px;             
+
+    font-weight: 600;
+    @include transition(0.7s);
+    cursor:pointer;   
+    
+    &:hover{
+        background-color: $color-S-button;
+        border:$color-S-button;    
+    }
+}

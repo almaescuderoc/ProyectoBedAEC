@@ -1,0 +1,1065 @@
+@use 'variables' as *;
+
+html{
+    font-size:17px;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: $font-doc ;
+}
+
+
+// HEADER *****************************************************************
+
+.contenedor{   
+    width: 100%;
+    height:15vh;
+
+    position:fixed;
+    background-color:$color-Text;
+    color:$color-hero-Text;
+
+    .nav-bar{
+        max-width:100%;
+        height:100%;
+        display: flex;
+        border-bottom: 1px solid $color-border;
+        background-color: $color-primary-header;
+  
+        .logo{
+            width:5%;
+            margin:0.5%;
+
+            .logo-icon{           
+                .logo-img{
+                    height:100%;
+
+                    display:flex;
+                    @include alineado(justify-content);
+                    @include alineado(align-items);
+                    
+                    background: url("archivos/mensajero.jpg") center no-repeat, $color-primary-header;
+                    background-size: cover;
+                    background-blend-mode: multiply;
+                }
+                .boton-oculto{
+                    display:none;
+                }
+            }
+
+        }
+
+        .logo-nombre{
+            display:flex;
+            @include alineado(justify-content, flex-start);
+            @include alineado(align-items);
+            width:35%;
+            font-size:3rem;
+            text-decoration: none;
+            
+            h6{
+                color:$color-hero-Text;
+                .logo-nombre-color{
+                    color:$color-S-button;
+                }
+            }
+        }
+
+        .lista-parent{
+            width:27%;
+            list-style: none;
+            display:flex;  
+            @include alineado(justify-content);
+            @include alineado(align-items);
+
+            .anchor-list{
+                margin:4%;
+                text-decoration: none;
+                color:$color-S-button;
+                color:$color-hero-Text;
+                font-weight:600;
+            }
+        }
+
+        .forma{
+            width:32%;
+            padding:2%;
+
+            display:flex;
+
+            @include alineado(justify-content, flex-end);
+            @include alineado(align-items);
+
+            .caja-texto{
+                padding:2%;
+                border-radius: 4px;
+                border:1px solid $color-border;
+                flex-basis:40%;
+
+                
+            }
+
+            .btn-rastreo{              
+                @extend %general-button;
+                margin-left:-4px;
+            }
+
+        }
+        
+    } // Fin nav-bar
+    
+} // Fin contenedor
+
+
+// HERO **********************************************************************+
+
+.hero{
+    max-width:90%;
+    height:75vh;
+    padding-top:9%;
+    margin:auto;
+
+    display:flex;
+    @include alineado(justify-content);
+    @include alineado(align-items);
+
+    .hero-div{
+        width:45%;
+        .hero-img{
+            max-width:100%;
+        }
+                     
+    }
+
+    .title-main{
+        width:45%;
+        @include alineado(text-align, left);
+
+        padding-left:15%;
+        font-size:2.3rem;
+        line-height: 4rem;
+        color:$color-hero-Text;
+        
+        display:flex;
+        flex-direction:column;
+        @include alineado(justify-content);
+        @include alineado(align-items, flex-start);
+
+        .forma-boton{
+            margin-top:7%;
+            .btn-rastreo{
+                @extend %general-button;
+                align-items: flex-start;
+                padding:30% 100%;
+                font-size:1.1rem;
+            }
+        }
+    }
+    
+} //Fin hero
+
+
+// BENEFITS *****************************************************************
+.benefits{
+    max-width: 60%;
+    height:48vh;
+    padding-bottom:5%;
+
+    display:grid;
+    grid-gap: 3%;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+
+    grid-template-areas: "c1 c2 c3";
+    margin: 5% auto;
+
+    .cuadro1{
+        grid-area: c1;
+    }
+
+    .cuadro2{
+        grid-area: c2;
+    }
+
+    .cuadro3{
+        grid-area: c3;
+    }
+
+    & > div{
+        border:1px solid $color-border;
+        
+        display:flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+
+        img{
+            max-width:100%;
+            height:27vh;
+        }
+    }
+
+    .parrafos{
+        margin-top: 3%;
+        font-size: 1.2rem;
+        font-weight: 600;
+        @include alineado(text-align, left);
+
+        .texto-adicional{
+            margin-top:6%;
+            font-weight:100;
+            font-size:1.1rem;
+        }
+
+        .benefits-a{
+            margin-top:6%;
+            display:flex;
+            @include alineado(justify-content, flex-end);
+            margin-right:2%;
+            font-weight:100;
+            text-decoration: none;
+            color:$color-link;
+            font-size:1.1rem;
+        }
+    }  // Fin de parrafos
+    
+}  //Fin de benefits
+
+
+// FOOTER ****************************************************************
+
+footer{
+    width: 100%;
+    height:17vh;
+
+    //margin-top:5%;
+    background-color:$color-primary-header;
+    color:$color-hero-Text;
+
+    display:flex;
+    flex-direction:column;
+
+    @include alineado(justify-content);
+    @include alineado(align-items);
+
+    .contacto{
+        margin-top:1.5%;
+        font-size:1.2rem;
+    }
+
+    .btn-rastreo{
+        @extend %general-button;
+        padding:1% 4%;
+        margin:1%;
+    }
+}
+
+
+
+/* OTRAS PAGINAS - LIGAS ***********************************************/
+
+// FORMA ENVIAR *****************************************************************
+
+.formulario-datos{
+    max-width: 100%;
+    background-color:$color-background-formulario;
+
+    padding-top:12%;
+    padding-bottom:3%;
+
+    .form-data{
+
+        background-color: $color-Text;
+        max-width: 78%;
+        height:109vh;
+        padding-top:0;
+        margin:2% auto;
+
+        display:grid;
+        grid-gap: 16%;
+
+        grid-template-columns: 1fr 1% 1fr;
+        grid-template-rows: 1fr;
+
+        grid-template-areas: "c1 c2 c3";
+
+        .cuadro1{
+            grid-area: c1;
+            margin-left:10%;
+            margin-top:10%;
+        }
+
+        .cuadro2{
+            grid-area: c2;
+            border-right:1px solid $color-border;
+            margin-right:50%;
+        }
+
+        .cuadro3{
+            grid-area: c3;
+            margin-right:10%;
+            margin-top:10%;
+        }
+
+        & > form{
+        // border:1px solid $color-border;
+            
+            display:flex;
+            flex-direction: column;
+
+            & > .grupo{
+                padding-top:5%;
+            }
+
+            .grupo-input{
+                font-size:1rem;
+                padding: 1% 0;
+            }
+
+            .div-reset{      
+                .boton-reset{
+                    @extend %general-button;
+                    font-size: 0.9rem;
+                    margin-top:1%;
+                }
+            }
+
+            .div-siguiente{
+                margin-top: 10%;
+
+                display:flex;
+                @include alineado(justify-content, flex-end);
+                @include alineado(align-items, flex-end);
+
+                .siguiente{
+                    @extend %general-button;
+                    background-color: $colorP-boton-Sig;  
+                    padding: 4% 6%;
+                    font-size: 1rem;  
+                    
+                    &:hover{
+                        background-color: $colorS-boton-Sig;
+                    }
+                }
+
+                
+            }
+
+        }
+        
+    }  //Fin de form-data
+}  //Fin MAIN
+
+
+// FORMA ENVIAR *****************************************************************
+
+.formulario-cotizar{
+    max-width: 100%;
+    background-color:$color-background-formulario;
+
+    padding-top:12%;
+    padding-bottom:3%;
+
+    h2{
+        padding-left:11%;
+    }
+
+    .form-cotizar{
+
+        background-color: $color-Text;
+        max-width: 78%;
+        height:79vh;
+        margin: 3% auto;
+
+        display:grid;
+        grid-gap: 8%;
+
+        grid-template-columns: 1fr 1% 1fr;
+        grid-template-rows: 2% 2% 1fr;
+
+        grid-template-areas: "i  i   i"
+                             "t  t   t"
+                             "c1 c2 c3";
+
+        .texto-ini{
+            grid-area: i;
+            margin-left:4%;
+            margin-top:3%;
+        }
+
+        .texto-cotizar{
+            grid-area: t;
+            margin-left:4%;
+
+            display:flex;
+            flex-wrap:wrap;
+            @include alineado(align-items);
+            
+            img{
+                max-width:100%
+            }
+        }
+  
+        .cuadro1{
+            grid-area: c1;
+            margin-left:10%;
+            margin-top:10%;
+        }
+
+        .cuadro2{
+            grid-area: c2;
+            border-right:1px solid $color-border;
+            margin-right:50%;
+        }
+
+        .cuadro3{
+            grid-area: c3;
+            margin-right:10%;
+            margin-top:10%;
+        }
+
+        & > form{
+        // border:1px solid $color-border;
+            
+            display:flex;
+            flex-direction: column;
+
+            & > .grupo{
+                padding-top:5%;
+            }
+
+            .grupo-input{
+                font-size:1rem;
+                padding: 1% 0;
+            }
+
+            .div-reset{      
+                .boton-reset{
+                    @extend %general-button;
+                    font-size: 0.9rem;
+                    margin-top:1%;
+                }
+            }
+
+            .div-siguiente{
+                margin-top: 10%;
+
+                display:flex;
+                @include alineado(justify-content, flex-end);
+                @include alineado(align-items, flex-end);
+
+                .siguiente{
+                    @extend %general-button;
+                    background-color: $colorP-boton-Sig;  
+                    padding: 3% 5%;
+                    font-size: 1rem;  
+                    
+                    &:hover{
+                        background-color: $colorS-boton-Sig;
+                    }
+                }
+                
+            }  // Fin .div-siguiente
+
+            .div-sig-cotizar{
+                height:34vh;
+            }
+
+        }
+        
+    }  //Fin de form-data
+}  //Fin MAIN
+
+// MEDIA QUERIES  ********************************************************
+
+
+/** dispositivos medianos (tablets) */
+@media (min-width: 768px) and (max-width: 991px){  
+    .contenedor{   
+        .nav-bar{      
+            .logo{
+                width:8%;
+
+                .logo-icon{
+                    display:flex;
+                    @include alineado(justify-content);
+                    @include alineado(align-items);
+                    margin-top:45%;
+                    margin-left:17%;
+                    width:50%;
+
+                    .logo-img{
+                        height:0;
+                        background:$color-primary-header;                       
+                    }
+                    .boton-oculto{
+ 
+                        display:block;
+                        
+                        font-size:1.9rem;
+                        font-weight:100;
+                        cursor:pointer;
+                    }
+                }
+            }
+    
+            
+            .logo-nombre{
+                width:52%;
+                @include alineado(justify-content);
+                @include alineado(align-items);
+            }
+
+
+            .lista-parent{
+                display:none;
+            }
+    
+            .forma{
+                width:40%;             
+            }
+        } // Fin nav-bar        
+    } // Fin contenedor    
+
+
+
+    .hero{
+        .hero-div{
+            display:none;         
+        }
+    
+        .title-main{
+            width:90%;
+            @include alineado(text-align);
+    
+            padding-left:0%;
+            
+            display:flex;
+            flex-direction:column;
+            @include alineado(justify-content);
+            @include alineado(align-items);
+
+            .forma-boton{
+                display:flex;
+                @include alineado(justify-content);
+                @include alineado(align-items);
+                .btn-rastreo{
+                    padding:38% 140%;
+                    align-items:center;
+                }
+            }
+        }
+        
+    } //Fin hero
+
+
+    .benefits{
+        max-width: 40%;
+        height:130vh;   
+        //height:100%;
+        padding-bottom:5%;
+
+        //grid-gap:3%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "c1"
+                             "c2"
+                             "c3";
+        margin:0 auto;
+
+    
+        .parrafos{
+
+            font-size: 0.9rem;
+    
+            .texto-adicional{
+                font-size:0.8rem;
+            }
+    
+            .benefits-a{
+                font-size:0.8rem;
+            }
+        }  // Fin de parrafos
+        
+    }  //Fin de benefits
+
+
+    footer{    
+       // margin-top:10%;
+    }
+
+
+
+    .formulario-datos{
+    
+        padding-top:16%;
+    
+        .form-data{
+
+            height: 235vh;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: "c1"
+                                "c3";
+            
+            grid-gap:0;
+            //margin:0 auto;
+    
+            .cuadro1{
+                grid-area: c1;
+                margin:5% 10%;
+                margin-bottom:0;
+            }
+    
+            .cuadro3{
+                grid-area: c3;
+                margin:8% 10%;
+            }
+            
+        }  //Fin de form-data   
+    }  //Fin MAIN
+    
+   
+    .formulario-cotizar{
+      
+        padding-top:17%;
+    
+        .form-cotizar{
+    
+            height:115vh;
+            grid-gap: 0;
+    
+            grid-template-columns: 1fr;
+            grid-template-rows: 6% 6% 1fr 1fr;
+    
+            grid-template-areas: "i"
+                                 "t"
+                                 "c1"
+                                 "c3";
+      
+            .cuadro1{
+                grid-area: c1;
+                margin:5% 10%;
+                margin-bottom:0;
+            }
+    
+    
+            .cuadro3{
+                grid-area: c3;
+                margin: 8% 10%;
+            }
+    
+            & > form{
+    
+                .div-sig-cotizar{
+                    height:8vh;
+
+                    .sig-cotizar{
+                        padding:2% 3%;
+                    }
+                }
+    
+            }   
+            
+        }  //Fin de form-data
+    }  //Fin MAIN
+    
+
+}
+
+
+
+
+ /** Dispositivos pequeños en vista landscape (horizontal) */
+ @media (min-width:643px) and (max-width:767px){
+    .contenedor{   
+        .nav-bar{      
+            .logo{
+                width:14%;
+
+                .logo-icon{
+                    display:flex;
+                    @include alineado(justify-content);
+                    @include alineado(align-items);
+                    margin-top:30%;
+                    margin-left:8%;
+                    width:35%;
+                    
+                    .logo-img{
+                        height:0;
+                        background:$color-primary-header;                       
+                    }
+                    .boton-oculto{
+ 
+                        display:block;
+                        
+                        font-size:1.9rem;
+                        font-weight:100;
+                        cursor:pointer; 
+                    } 
+                }
+            }
+    
+            
+            .logo-nombre{
+                width:49%;
+                font-size:2.5rem;
+            }
+
+
+            .lista-parent{
+                display:none;
+            }
+    
+            .forma{
+                width:37%;  
+            }
+    
+        } // Fin nav-bar        
+    } // Fin contenedor
+
+
+    .hero{
+    
+        .hero-div{
+            display:none;         
+        }
+    
+        .title-main{
+            width:90%;
+            @include alineado(text-align);
+    
+            padding-left:0%;
+            
+            display:flex;
+            flex-direction:column;
+            @include alineado(justify-content);
+            @include alineado(align-items);
+
+            .forma-boton{
+                display:flex;
+                @include alineado(justify-content);
+                @include alineado(align-items);
+                .btn-rastreo{
+                    padding:38% 140%;
+                    align-items:center;
+                }
+            }
+        }
+        
+    } //Fin hero
+
+
+    .benefits{
+        max-width: 40%;
+        height:135vh;   
+        //height:100%;
+        padding-bottom:5%;
+
+        //grid-gap:3%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "c1"
+                             "c2"
+                             "c3";
+        margin:0 auto;
+
+    
+        .parrafos{
+
+            font-size: 0.9rem;
+    
+            .texto-adicional{
+                font-size:0.8rem;
+            }
+    
+            .benefits-a{
+                font-size:0.8rem;
+            }
+        }  // Fin de parrafos
+        
+    }  //Fin de benefits
+
+    footer{    
+       // margin-top:10%;
+    }
+
+
+    .formulario-datos{
+    
+        padding-top:22%;
+    
+        .form-data{
+
+            height: 209vh;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: "c1"
+                                "c3";
+            
+            grid-gap:0;
+            margin:0 auto;
+    
+            .cuadro1{
+                grid-area: c1;
+                margin:5% 10%;
+                margin-bottom:0;
+            }
+    
+            .cuadro3{
+                grid-area: c3;
+                margin:0 10%;
+            }
+            
+        }  //Fin de form-data   
+    }  //Fin MAIN
+
+
+
+    .formulario-cotizar{
+      
+        padding-top:21%;
+    
+        .form-cotizar{
+    
+            height:102vh;
+            grid-gap: 0;
+    
+            grid-template-columns: 1fr;
+            grid-template-rows: 6% 6% 1fr 1fr;
+    
+            grid-template-areas: "i"
+                                 "t"
+                                 "c1"
+                                 "c3";
+      
+            .cuadro1{
+                grid-area: c1;
+                margin:5% 10%;
+                margin-bottom:0;
+            }
+    
+    
+            .cuadro3{
+                grid-area: c3;
+                margin: 8% 10%;
+            }
+    
+            & > form{
+    
+                .div-sig-cotizar{
+                    height:8vh;
+
+                    .sig-cotizar{
+                        padding:2% 3%;
+                    }
+                }
+    
+            }   
+            
+        }  //Fin de form-data
+    }  //Fin MAIN
+
+
+}
+
+
+
+
+@media (max-width:642px){ 
+    .contenedor{   
+        .nav-bar{      
+            .logo{
+                width:20%;
+
+                .logo-icon{
+                    display:flex;
+                    @include alineado(justify-content);
+                    @include alineado(align-items);
+                    margin-top:24%;
+                    margin-left:4%;
+                    width:35%; 
+
+                    .logo-img{
+                        height:0;
+                        background:$color-primary-header;                       
+                    }
+                    .boton-oculto{
+ 
+                        display:block;
+                        
+                        font-size:1.9rem;
+                        font-weight:100;
+                        cursor:pointer; 
+                    }
+                }
+            }
+    
+            
+            .logo-nombre{
+                width:80%;
+                @include alineado(justify-content, flex-start);
+                @include alineado(align-items);
+               // font-size:2.5rem;
+            }
+
+
+            .lista-parent{
+                display:none;
+            }
+    
+            .forma{
+                display:none;
+                background-color: white;
+               // @include alineado(justify-content, flex-end);              
+            }
+            
+        } // Fin nav-bar        
+    } // Fin contenedor  
+    
+    .hero{
+    
+        .hero-div{
+            display:none;         
+        }
+    
+        .title-main{
+            width:90%;
+            @include alineado(text-align);
+    
+            padding-left:0%;
+            
+            display:flex;
+            flex-direction:column;
+            @include alineado(justify-content);
+            @include alineado(align-items);
+
+            .forma-boton{
+                display:flex;
+                @include alineado(justify-content);
+                @include alineado(align-items);
+                .btn-rastreo{
+                    padding:38% 140%;
+                    align-items:center;
+                }
+            }
+        }
+        
+    } //Fin hero
+
+
+    .benefits{
+        max-width: 40%;
+        height:135vh;   
+        //height:100%;
+        padding-bottom:5%;
+
+        //grid-gap:3%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "c1"
+                             "c2"
+                             "c3";
+        margin:0 auto;
+
+    
+        .parrafos{
+
+            font-size: 0.9rem;
+    
+            .texto-adicional{
+                font-size:0.8rem;
+            }
+    
+            .benefits-a{
+                font-size:0.8rem;
+            }
+        }  // Fin de parrafos
+        
+    }  //Fin de benefits
+
+    footer{    
+       // margin-top:15%;
+    }
+
+
+    .formulario-datos{
+    
+        padding-top:25%;
+    
+        .form-data{
+
+            height: 189vh;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas: "c1"
+                                "c3";
+            
+            grid-gap:0;
+            margin:0 auto;
+    
+            .cuadro1{
+                grid-area: c1;
+                margin:5% 10%;
+                margin-bottom:0;
+            }
+    
+            .cuadro3{
+                grid-area: c3;
+                margin:3% 10%;
+            }
+            
+        }  //Fin de form-data   
+    }  //Fin MAIN
+
+    .formulario-cotizar{
+      
+        padding-top:25%;
+    
+        .form-cotizar{
+    
+            height:98vh;
+            grid-gap: 0;
+    
+            grid-template-columns: 1fr;
+            grid-template-rows: 6% 6% 1fr 1fr;
+    
+            grid-template-areas: "i"
+                                 "t"
+                                 "c1"
+                                 "c3";
+      
+            .cuadro1{
+                grid-area: c1;
+                margin:5% 10%;
+                margin-bottom:0;
+            }
+    
+    
+            .cuadro3{
+                grid-area: c3;
+                margin: 8% 10%;
+            }
+    
+            & > form{
+    
+                .div-sig-cotizar{
+                    height:8vh;
+
+                    .sig-cotizar{
+                        padding:2% 3%;
+                    }
+                }
+    
+            }   
+            
+        }  //Fin de form-data
+    }  //Fin MAIN
+
+}  //Fin media query 

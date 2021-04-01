@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /** _global.scss */
 /** fuentes */
-/** Otras variables*/
+/** Otras variables para Sass*/
 /** Testing placeholders */
 .contenedor .header .navbar > button, .contenedor .header .accion > button, .container .hero-title > button,
 .hero .hero-title > button {
@@ -11,7 +11,11 @@
   border: none;
   border-radius: 3%;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
 }
 
 /** main.scss */

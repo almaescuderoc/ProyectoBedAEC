@@ -10,7 +10,7 @@ $colorMenu: #747272;
 /** fuentes */
 $font-page:'Source Sans Pro', sans-serif; 
 
-/** Otras variables*/
+/** Otras variables para Sass*/
 $tipo-fijo:fixed;
 $tipo-flex:flex;
 $tipo-block:block;
@@ -25,6 +25,24 @@ $underline:underline;
 $pos-absoluta:absolute;
 $pointer:pointer;
 
+
+//Testing mixins
+@mixin alineado($property, $value:center){
+  #{$property}:#{$value};
+}
+
+@mixin prefixer($property, $value, $prefixes: webkit moz ms o) {
+  #{$property}: #{$value};
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: #{$value};
+  }
+}
+
+@mixin transition($value: 0.5s) {
+  @include prefixer(transition, $value);
+}
+
+
 /** Testing placeholders */
 %buttonGeneral{
   background-color: $colorBlueP;
@@ -33,7 +51,8 @@ $pointer:pointer;
   border:none;
   border-radius: 3%; 
   cursor:pointer;
-  transition: all 0.5s;
+  @include transition(0.6s);
+  //transition: all 0.5s;
 }
 
  

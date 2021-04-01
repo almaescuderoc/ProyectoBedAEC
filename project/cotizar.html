@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="archivos/fontawesome/css/all.css">
+    <title>Proyecto Mensajería</title>
+</head>
+<body>
+
+     <!-- HEADER -->
+
+    <header class="contenedor">
+        <nav class="nav-bar">
+
+            <div class="logo">
+                <a class="logo-icon" href="index.html"> 
+                    <div class="logo-img">                       
+                    </div>
+
+                    <button class="boton-oculto">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </a>             
+            </div>
+
+            <a class="logo-nombre" href="index.html">
+                <h6> RAPIDITO <span class="logo-nombre-color">EXPRESS</span></h6>
+            </a>
+
+            <ul class="lista-parent">
+                <a class="anchor-list" href="index.html"><li class="lista-hijo">Inicio</li></a>
+                <a class="anchor-list" href="enviar.html"><li class="lista-hijo">Enviar</li></a>
+                <a class="anchor-list"  href="#"><li class="lista-hijo">Cotizar</li></a>
+            </ul>
+
+            <form class="forma">
+                <input class="caja-texto" type="text" placeholder="Ingresa codigo de envío: ">
+                <button class="btn-rastreo" type="submit">Rastrear</button>
+            </form>
+
+        </nav>
+    </header>
+
+    
+    <!-- FORM TO CAPTURE USER INPUT DATA -->
+
+    <main class="formulario-cotizar">
+        
+        <h2>Cotización</h2>
+
+        <section class="form-cotizar">  
+            
+            <h5 class="texto-ini">¡Revisa nuestras opciones de entrega y tarifas!</h5>
+
+            <p class="texto-cotizar">Listo para enviar en línea? <i>Paga con tarjeta de crédito</i> 
+            <img src="archivos/visa.png" alt="">
+            </p>
+
+            <form class="cuadro1">     
+                
+                <h3 class="de">De</h3>
+
+                <label for="pais" class="grupo">País</label>
+                <input type="text" name="pais" class="grupo-input" placeholder="México">
+
+                <label for="direccion" class="grupo">Dirección</label>
+                <input type="text" name="direccion" class="grupo-input">
+
+                <label for="cp" class="grupo">Código Postal</label>
+                <input type="number" name="cp" class="grupo-input">
+
+                <label for="ciudad" class="grupo">Ciudad</label>
+                <input type="text" name="ciudad" class="grupo-input">
+
+                <label for="estado" class="grupo">Estado</label>
+                <input type="text" name="estado" class="grupo-input">
+
+            </form>
+
+            <div class="cuadro2">
+            </div>
+
+            <form class="cuadro3">
+                <h3 class="dea">A</h3>
+                
+                <label for="paisd"class="grupo">País</label>
+                <input type="text" name="paisd" class="grupo-input" placeholder="México">
+
+                <div class="div-siguiente div-sig-cotizar">
+                    <button class="siguiente sig-cotizar" type="submit">Siguiente</button>
+                </div>
+            </form>
+        
+        </section>    
+    </main>    
+
+     <!-- FOOTER -->
+
+    <footer>
+        <h4 class="contacto">Contacto</h4>
+        <button class="btn-rastreo">Aquí</button>    
+    </footer>
+
+    
+    
+</body>
+</html>

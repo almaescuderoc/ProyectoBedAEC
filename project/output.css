@@ -1,0 +1,729 @@
+@charset "UTF-8";
+.contenedor .nav-bar .forma .btn-rastreo, .hero .title-main .forma-boton .btn-rastreo, footer .btn-rastreo, .formulario-datos .form-data > form .div-reset .boton-reset, .formulario-datos .form-data > form .div-siguiente .siguiente, .formulario-cotizar .form-cotizar > form .div-reset .boton-reset, .formulario-cotizar .form-cotizar > form .div-siguiente .siguiente {
+  padding: 2% 3%;
+  background-color: #F44336;
+  color: #fff;
+  border: #F44336;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  cursor: pointer;
+}
+.contenedor .nav-bar .forma .btn-rastreo:hover, .hero .title-main .forma-boton .btn-rastreo:hover, footer .btn-rastreo:hover, .formulario-datos .form-data > form .div-reset .boton-reset:hover, .formulario-datos .form-data > form .div-siguiente .siguiente:hover, .formulario-cotizar .form-cotizar > form .div-reset .boton-reset:hover, .formulario-cotizar .form-cotizar > form .div-siguiente .siguiente:hover {
+  background-color: #D32F2F;
+  border: #D32F2F;
+}
+
+html {
+  font-size: 17px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+  width: 100%;
+  height: 15vh;
+  position: fixed;
+  background-color: #fff;
+  color: #455A64;
+}
+.contenedor .nav-bar {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  border-bottom: 1px solid #BDBDBD;
+  background-color: #fecb2f;
+}
+.contenedor .nav-bar .logo {
+  width: 5%;
+  margin: 0.5%;
+}
+.contenedor .nav-bar .logo .logo-icon .logo-img {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("archivos/mensajero.jpg") center no-repeat, #fecb2f;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+.contenedor .nav-bar .logo .logo-icon .boton-oculto {
+  display: none;
+}
+.contenedor .nav-bar .logo-nombre {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 35%;
+  font-size: 3rem;
+  text-decoration: none;
+}
+.contenedor .nav-bar .logo-nombre h6 {
+  color: #455A64;
+}
+.contenedor .nav-bar .logo-nombre h6 .logo-nombre-color {
+  color: #D32F2F;
+}
+.contenedor .nav-bar .lista-parent {
+  width: 27%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor .nav-bar .lista-parent .anchor-list {
+  margin: 4%;
+  text-decoration: none;
+  color: #D32F2F;
+  color: #455A64;
+  font-weight: 600;
+}
+.contenedor .nav-bar .forma {
+  width: 32%;
+  padding: 2%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.contenedor .nav-bar .forma .caja-texto {
+  padding: 2%;
+  border-radius: 4px;
+  border: 1px solid #BDBDBD;
+  flex-basis: 40%;
+}
+.contenedor .nav-bar .forma .btn-rastreo {
+  margin-left: -4px;
+}
+
+.hero {
+  max-width: 90%;
+  height: 75vh;
+  padding-top: 9%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero-div {
+  width: 45%;
+}
+.hero .hero-div .hero-img {
+  max-width: 100%;
+}
+.hero .title-main {
+  width: 45%;
+  text-align: left;
+  padding-left: 15%;
+  font-size: 2.3rem;
+  line-height: 4rem;
+  color: #455A64;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hero .title-main .forma-boton {
+  margin-top: 7%;
+}
+.hero .title-main .forma-boton .btn-rastreo {
+  align-items: flex-start;
+  padding: 30% 100%;
+  font-size: 1.1rem;
+}
+
+.benefits {
+  max-width: 60%;
+  height: 48vh;
+  padding-bottom: 5%;
+  display: grid;
+  grid-gap: 3%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "c1 c2 c3";
+  margin: 5% auto;
+}
+.benefits .cuadro1 {
+  grid-area: c1;
+}
+.benefits .cuadro2 {
+  grid-area: c2;
+}
+.benefits .cuadro3 {
+  grid-area: c3;
+}
+.benefits > div {
+  border: 1px solid #BDBDBD;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.benefits > div img {
+  max-width: 100%;
+  height: 27vh;
+}
+.benefits .parrafos {
+  margin-top: 3%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+}
+.benefits .parrafos .texto-adicional {
+  margin-top: 6%;
+  font-weight: 100;
+  font-size: 1.1rem;
+}
+.benefits .parrafos .benefits-a {
+  margin-top: 6%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2%;
+  font-weight: 100;
+  text-decoration: none;
+  color: #007acc;
+  font-size: 1.1rem;
+}
+
+footer {
+  width: 100%;
+  height: 17vh;
+  background-color: #fecb2f;
+  color: #455A64;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .contacto {
+  margin-top: 1.5%;
+  font-size: 1.2rem;
+}
+footer .btn-rastreo {
+  padding: 1% 4%;
+  margin: 1%;
+}
+
+/* OTRAS PAGINAS - LIGAS ***********************************************/
+.formulario-datos {
+  max-width: 100%;
+  background-color: #f1f1f1;
+  padding-top: 12%;
+  padding-bottom: 3%;
+}
+.formulario-datos .form-data {
+  background-color: #fff;
+  max-width: 78%;
+  height: 109vh;
+  padding-top: 0;
+  margin: 2% auto;
+  display: grid;
+  grid-gap: 16%;
+  grid-template-columns: 1fr 1% 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "c1 c2 c3";
+}
+.formulario-datos .form-data .cuadro1 {
+  grid-area: c1;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.formulario-datos .form-data .cuadro2 {
+  grid-area: c2;
+  border-right: 1px solid #BDBDBD;
+  margin-right: 50%;
+}
+.formulario-datos .form-data .cuadro3 {
+  grid-area: c3;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+.formulario-datos .form-data > form {
+  display: flex;
+  flex-direction: column;
+}
+.formulario-datos .form-data > form > .grupo {
+  padding-top: 5%;
+}
+.formulario-datos .form-data > form .grupo-input {
+  font-size: 1rem;
+  padding: 1% 0;
+}
+.formulario-datos .form-data > form .div-reset .boton-reset {
+  font-size: 0.9rem;
+  margin-top: 1%;
+}
+.formulario-datos .form-data > form .div-siguiente {
+  margin-top: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.formulario-datos .form-data > form .div-siguiente .siguiente {
+  background-color: #2bb82b;
+  padding: 4% 6%;
+  font-size: 1rem;
+}
+.formulario-datos .form-data > form .div-siguiente .siguiente:hover {
+  background-color: #26a326;
+}
+
+.formulario-cotizar {
+  max-width: 100%;
+  background-color: #f1f1f1;
+  padding-top: 12%;
+  padding-bottom: 3%;
+}
+.formulario-cotizar h2 {
+  padding-left: 11%;
+}
+.formulario-cotizar .form-cotizar {
+  background-color: #fff;
+  max-width: 78%;
+  height: 79vh;
+  margin: 3% auto;
+  display: grid;
+  grid-gap: 8%;
+  grid-template-columns: 1fr 1% 1fr;
+  grid-template-rows: 2% 2% 1fr;
+  grid-template-areas: "i  i   i" "t  t   t" "c1 c2 c3";
+}
+.formulario-cotizar .form-cotizar .texto-ini {
+  grid-area: i;
+  margin-left: 4%;
+  margin-top: 3%;
+}
+.formulario-cotizar .form-cotizar .texto-cotizar {
+  grid-area: t;
+  margin-left: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.formulario-cotizar .form-cotizar .texto-cotizar img {
+  max-width: 100%;
+}
+.formulario-cotizar .form-cotizar .cuadro1 {
+  grid-area: c1;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.formulario-cotizar .form-cotizar .cuadro2 {
+  grid-area: c2;
+  border-right: 1px solid #BDBDBD;
+  margin-right: 50%;
+}
+.formulario-cotizar .form-cotizar .cuadro3 {
+  grid-area: c3;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+.formulario-cotizar .form-cotizar > form {
+  display: flex;
+  flex-direction: column;
+}
+.formulario-cotizar .form-cotizar > form > .grupo {
+  padding-top: 5%;
+}
+.formulario-cotizar .form-cotizar > form .grupo-input {
+  font-size: 1rem;
+  padding: 1% 0;
+}
+.formulario-cotizar .form-cotizar > form .div-reset .boton-reset {
+  font-size: 0.9rem;
+  margin-top: 1%;
+}
+.formulario-cotizar .form-cotizar > form .div-siguiente {
+  margin-top: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.formulario-cotizar .form-cotizar > form .div-siguiente .siguiente {
+  background-color: #2bb82b;
+  padding: 3% 5%;
+  font-size: 1rem;
+}
+.formulario-cotizar .form-cotizar > form .div-siguiente .siguiente:hover {
+  background-color: #26a326;
+}
+.formulario-cotizar .form-cotizar > form .div-sig-cotizar {
+  height: 34vh;
+}
+
+/** dispositivos medianos (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .contenedor .nav-bar .logo {
+    width: 8%;
+  }
+  .contenedor .nav-bar .logo .logo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45%;
+    margin-left: 17%;
+    width: 50%;
+  }
+  .contenedor .nav-bar .logo .logo-icon .logo-img {
+    height: 0;
+    background: #fecb2f;
+  }
+  .contenedor .nav-bar .logo .logo-icon .boton-oculto {
+    display: block;
+    font-size: 1.9rem;
+    font-weight: 100;
+    cursor: pointer;
+  }
+  .contenedor .nav-bar .logo-nombre {
+    width: 52%;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedor .nav-bar .lista-parent {
+    display: none;
+  }
+  .contenedor .nav-bar .forma {
+    width: 40%;
+  }
+
+  .hero .hero-div {
+    display: none;
+  }
+  .hero .title-main {
+    width: 90%;
+    text-align: center;
+    padding-left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero .title-main .forma-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero .title-main .forma-boton .btn-rastreo {
+    padding: 38% 140%;
+    align-items: center;
+  }
+
+  .benefits {
+    max-width: 40%;
+    height: 130vh;
+    padding-bottom: 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "c1" "c2" "c3";
+    margin: 0 auto;
+  }
+  .benefits .parrafos {
+    font-size: 0.9rem;
+  }
+  .benefits .parrafos .texto-adicional {
+    font-size: 0.8rem;
+  }
+  .benefits .parrafos .benefits-a {
+    font-size: 0.8rem;
+  }
+
+  .formulario-datos {
+    padding-top: 16%;
+  }
+  .formulario-datos .form-data {
+    height: 235vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "c1" "c3";
+    grid-gap: 0;
+  }
+  .formulario-datos .form-data .cuadro1 {
+    grid-area: c1;
+    margin: 5% 10%;
+    margin-bottom: 0;
+  }
+  .formulario-datos .form-data .cuadro3 {
+    grid-area: c3;
+    margin: 8% 10%;
+  }
+
+  .formulario-cotizar {
+    padding-top: 17%;
+  }
+  .formulario-cotizar .form-cotizar {
+    height: 115vh;
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6% 6% 1fr 1fr;
+    grid-template-areas: "i" "t" "c1" "c3";
+  }
+  .formulario-cotizar .form-cotizar .cuadro1 {
+    grid-area: c1;
+    margin: 5% 10%;
+    margin-bottom: 0;
+  }
+  .formulario-cotizar .form-cotizar .cuadro3 {
+    grid-area: c3;
+    margin: 8% 10%;
+  }
+  .formulario-cotizar .form-cotizar > form .div-sig-cotizar {
+    height: 8vh;
+  }
+  .formulario-cotizar .form-cotizar > form .div-sig-cotizar .sig-cotizar {
+    padding: 2% 3%;
+  }
+}
+/** Dispositivos pequeños en vista landscape (horizontal) */
+@media (min-width: 643px) and (max-width: 767px) {
+  .contenedor .nav-bar .logo {
+    width: 14%;
+  }
+  .contenedor .nav-bar .logo .logo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    margin-left: 8%;
+    width: 35%;
+  }
+  .contenedor .nav-bar .logo .logo-icon .logo-img {
+    height: 0;
+    background: #fecb2f;
+  }
+  .contenedor .nav-bar .logo .logo-icon .boton-oculto {
+    display: block;
+    font-size: 1.9rem;
+    font-weight: 100;
+    cursor: pointer;
+  }
+  .contenedor .nav-bar .logo-nombre {
+    width: 49%;
+    font-size: 2.5rem;
+  }
+  .contenedor .nav-bar .lista-parent {
+    display: none;
+  }
+  .contenedor .nav-bar .forma {
+    width: 37%;
+  }
+
+  .hero .hero-div {
+    display: none;
+  }
+  .hero .title-main {
+    width: 90%;
+    text-align: center;
+    padding-left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero .title-main .forma-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero .title-main .forma-boton .btn-rastreo {
+    padding: 38% 140%;
+    align-items: center;
+  }
+
+  .benefits {
+    max-width: 40%;
+    height: 135vh;
+    padding-bottom: 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "c1" "c2" "c3";
+    margin: 0 auto;
+  }
+  .benefits .parrafos {
+    font-size: 0.9rem;
+  }
+  .benefits .parrafos .texto-adicional {
+    font-size: 0.8rem;
+  }
+  .benefits .parrafos .benefits-a {
+    font-size: 0.8rem;
+  }
+
+  .formulario-datos {
+    padding-top: 22%;
+  }
+  .formulario-datos .form-data {
+    height: 209vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "c1" "c3";
+    grid-gap: 0;
+    margin: 0 auto;
+  }
+  .formulario-datos .form-data .cuadro1 {
+    grid-area: c1;
+    margin: 5% 10%;
+    margin-bottom: 0;
+  }
+  .formulario-datos .form-data .cuadro3 {
+    grid-area: c3;
+    margin: 0 10%;
+  }
+
+  .formulario-cotizar {
+    padding-top: 21%;
+  }
+  .formulario-cotizar .form-cotizar {
+    height: 102vh;
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6% 6% 1fr 1fr;
+    grid-template-areas: "i" "t" "c1" "c3";
+  }
+  .formulario-cotizar .form-cotizar .cuadro1 {
+    grid-area: c1;
+    margin: 5% 10%;
+    margin-bottom: 0;
+  }
+  .formulario-cotizar .form-cotizar .cuadro3 {
+    grid-area: c3;
+    margin: 8% 10%;
+  }
+  .formulario-cotizar .form-cotizar > form .div-sig-cotizar {
+    height: 8vh;
+  }
+  .formulario-cotizar .form-cotizar > form .div-sig-cotizar .sig-cotizar {
+    padding: 2% 3%;
+  }
+}
+@media (max-width: 642px) {
+  .contenedor .nav-bar .logo {
+    width: 20%;
+  }
+  .contenedor .nav-bar .logo .logo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24%;
+    margin-left: 4%;
+    width: 35%;
+  }
+  .contenedor .nav-bar .logo .logo-icon .logo-img {
+    height: 0;
+    background: #fecb2f;
+  }
+  .contenedor .nav-bar .logo .logo-icon .boton-oculto {
+    display: block;
+    font-size: 1.9rem;
+    font-weight: 100;
+    cursor: pointer;
+  }
+  .contenedor .nav-bar .logo-nombre {
+    width: 80%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .contenedor .nav-bar .lista-parent {
+    display: none;
+  }
+  .contenedor .nav-bar .forma {
+    display: none;
+    background-color: white;
+  }
+
+  .hero .hero-div {
+    display: none;
+  }
+  .hero .title-main {
+    width: 90%;
+    text-align: center;
+    padding-left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero .title-main .forma-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero .title-main .forma-boton .btn-rastreo {
+    padding: 38% 140%;
+    align-items: center;
+  }
+
+  .benefits {
+    max-width: 40%;
+    height: 135vh;
+    padding-bottom: 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "c1" "c2" "c3";
+    margin: 0 auto;
+  }
+  .benefits .parrafos {
+    font-size: 0.9rem;
+  }
+  .benefits .parrafos .texto-adicional {
+    font-size: 0.8rem;
+  }
+  .benefits .parrafos .benefits-a {
+    font-size: 0.8rem;
+  }
+
+  .formulario-datos {
+    padding-top: 25%;
+  }
+  .formulario-datos .form-data {
+    height: 189vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "c1" "c3";
+    grid-gap: 0;
+    margin: 0 auto;
+  }
+  .formulario-datos .form-data .cuadro1 {
+    grid-area: c1;
+    margin: 5% 10%;
+    margin-bottom: 0;
+  }
+  .formulario-datos .form-data .cuadro3 {
+    grid-area: c3;
+    margin: 3% 10%;
+  }
+
+  .formulario-cotizar {
+    padding-top: 25%;
+  }
+  .formulario-cotizar .form-cotizar {
+    height: 98vh;
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6% 6% 1fr 1fr;
+    grid-template-areas: "i" "t" "c1" "c3";
+  }
+  .formulario-cotizar .form-cotizar .cuadro1 {
+    grid-area: c1;
+    margin: 5% 10%;
+    margin-bottom: 0;
+  }
+  .formulario-cotizar .form-cotizar .cuadro3 {
+    grid-area: c3;
+    margin: 8% 10%;
+  }
+  .formulario-cotizar .form-cotizar > form .div-sig-cotizar {
+    height: 8vh;
+  }
+  .formulario-cotizar .form-cotizar > form .div-sig-cotizar .sig-cotizar {
+    padding: 2% 3%;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
