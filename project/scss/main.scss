@@ -465,7 +465,7 @@ footer{
             }  // Fin .div-siguiente
 
             .div-sig-cotizar{
-                height:34vh;
+                height:24vh;
             }
 
         }
@@ -587,10 +587,6 @@ footer{
     }  //Fin de benefits
 
 
-    footer{    
-       // margin-top:10%;
-    }
-
 
 
     .formulario-datos{
@@ -630,7 +626,7 @@ footer{
     
         .form-cotizar{
     
-            height:115vh;
+            height:122vh;
             grid-gap: 0;
     
             grid-template-columns: 1fr;
@@ -656,7 +652,7 @@ footer{
             & > form{
     
                 .div-sig-cotizar{
-                    height:8vh;
+                    height:4vh;
 
                     .sig-cotizar{
                         padding:2% 3%;
@@ -784,9 +780,6 @@ footer{
         
     }  //Fin de benefits
 
-    footer{    
-       // margin-top:10%;
-    }
 
 
     .formulario-datos{
@@ -827,7 +820,7 @@ footer{
     
         .form-cotizar{
     
-            height:102vh;
+            height:107vh;
             grid-gap: 0;
     
             grid-template-columns: 1fr;
@@ -853,7 +846,7 @@ footer{
             & > form{
     
                 .div-sig-cotizar{
-                    height:8vh;
+                    height:4vh;
 
                     .sig-cotizar{
                         padding:2% 3%;
@@ -865,6 +858,11 @@ footer{
         }  //Fin de form-data
     }  //Fin MAIN
 
+    footer{
+        .btn-rastreo{
+            padding:1.5% 5%;
+        }
+    }
 
 }
 
@@ -983,9 +981,6 @@ footer{
         
     }  //Fin de benefits
 
-    footer{    
-       // margin-top:15%;
-    }
 
 
     .formulario-datos{
@@ -1020,7 +1015,7 @@ footer{
 
     .formulario-cotizar{
       
-        padding-top:25%;
+        padding-top:30%;
     
         .form-cotizar{
     
@@ -1050,7 +1045,7 @@ footer{
             & > form{
     
                 .div-sig-cotizar{
-                    height:8vh;
+                    height:4vh;
 
                     .sig-cotizar{
                         padding:2% 3%;
@@ -1061,5 +1056,11 @@ footer{
             
         }  //Fin de form-data
     }  //Fin MAIN
+
+    footer{
+        .btn-rastreo{
+            padding:2% 6%;
+        }
+    }
 
 }  //Fin media query 

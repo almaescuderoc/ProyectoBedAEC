@@ -355,7 +355,7 @@ footer .btn-rastreo {
   background-color: #26a326;
 }
 .formulario-cotizar .form-cotizar > form .div-sig-cotizar {
-  height: 34vh;
+  height: 24vh;
 }
 
 /** dispositivos medianos (tablets) */
@@ -458,7 +458,7 @@ footer .btn-rastreo {
     padding-top: 17%;
   }
   .formulario-cotizar .form-cotizar {
-    height: 115vh;
+    height: 122vh;
     grid-gap: 0;
     grid-template-columns: 1fr;
     grid-template-rows: 6% 6% 1fr 1fr;
@@ -474,7 +474,7 @@ footer .btn-rastreo {
     margin: 8% 10%;
   }
   .formulario-cotizar .form-cotizar > form .div-sig-cotizar {
-    height: 8vh;
+    height: 4vh;
   }
   .formulario-cotizar .form-cotizar > form .div-sig-cotizar .sig-cotizar {
     padding: 2% 3%;
@@ -580,7 +580,7 @@ footer .btn-rastreo {
     padding-top: 21%;
   }
   .formulario-cotizar .form-cotizar {
-    height: 102vh;
+    height: 107vh;
     grid-gap: 0;
     grid-template-columns: 1fr;
     grid-template-rows: 6% 6% 1fr 1fr;
@@ -596,10 +596,14 @@ footer .btn-rastreo {
     margin: 8% 10%;
   }
   .formulario-cotizar .form-cotizar > form .div-sig-cotizar {
-    height: 8vh;
+    height: 4vh;
   }
   .formulario-cotizar .form-cotizar > form .div-sig-cotizar .sig-cotizar {
     padding: 2% 3%;
+  }
+
+  footer .btn-rastreo {
+    padding: 1.5% 5%;
   }
 }
 @media (max-width: 642px) {
@@ -700,7 +704,7 @@ footer .btn-rastreo {
   }
 
   .formulario-cotizar {
-    padding-top: 25%;
+    padding-top: 30%;
   }
   .formulario-cotizar .form-cotizar {
     height: 98vh;
@@ -719,10 +723,14 @@ footer .btn-rastreo {
     margin: 8% 10%;
   }
   .formulario-cotizar .form-cotizar > form .div-sig-cotizar {
-    height: 8vh;
+    height: 4vh;
   }
   .formulario-cotizar .form-cotizar > form .div-sig-cotizar .sig-cotizar {
     padding: 2% 3%;
+  }
+
+  footer .btn-rastreo {
+    padding: 2% 6%;
   }
 }
 
